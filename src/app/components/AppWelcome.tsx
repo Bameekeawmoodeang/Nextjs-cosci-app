@@ -1,9 +1,13 @@
 'use client'
 
-export default function Appwelcome(){
+type AppWelcomeProps = {
+    headTitle: string;
+    isShow: boolean;
+}
+
+export default function Appwelcome({headTitle, isShow}: AppWelcomeProps){
     const title = 'Welcome to cosci';
     const curentYear = <p>2025</p>;
-    const isShow = true;
     const handleClick = () => {
         alert('Hello Typescript');
     }
@@ -11,6 +15,7 @@ export default function Appwelcome(){
 
     return (
     <> 
+        <h1>{headTitle}</h1>
         <p>{title.toUpperCase()}</p>
         <button className="bg-blue-700 p-3 m-3 text-white rounded-lg" onClick={handleClick}>กดได้เลย!</button>
         {curentYear}
