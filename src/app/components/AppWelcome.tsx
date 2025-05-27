@@ -22,6 +22,7 @@ export default function Appwelcome({headTitle, isShow}: AppWelcomeProps){
     return (
     <> 
         <h1>{headTitle}</h1>
+        <p>{process.env.NEXT_PUBLIC_APP_NAME}</p>
         <p>{title.toUpperCase()}</p>
         <Button onClick={handleClick}>Click me</Button>
         <button className="bg-blue-700 p-3 m-3 text-white rounded-lg" onClick={handleClick}>กดได้เลย!</button>
